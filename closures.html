@@ -1,0 +1,21 @@
+<html>
+  <head>Testing closures</head>
+  <script>
+    function toPow(p){
+      return function (num){
+        var result = 1;
+        for(var i = 0; i < p; i++){
+          result *= num;
+        }
+        return result;
+      };
+    }
+
+    var square = toPow(2);
+    var cube = toPow(3);
+    </script>
+  <body>
+    <button type="button" onclick="alert(square(10))">Square</button>
+    <button type="button" onclick="alert(cube(5))">Cube</button>
+  </body>
+</html>
